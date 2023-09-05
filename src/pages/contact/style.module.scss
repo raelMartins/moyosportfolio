@@ -1,0 +1,87 @@
+@import '../../styles/mixins.module.scss';
+
+.main {
+  min-height: 100vh;
+  .header {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../../public/images/contact_background_image.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .header_content {
+      color: white;
+      background-color: rgb(0, 0, 0, 0.79);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+  }
+  .contact_form {
+    background-color: #f1f1f1;
+    padding: 5.5vmax 4.75vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      width: 46.2rem;
+      max-width: 90%;
+      margin: 0rem auto;
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .form_field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      label {
+        @include text_style;
+        text-transform: uppercase;
+        color: #2d2d2d;
+      }
+      input,
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 0.1rem solid rgba(45, 45, 45, 0.2);
+        padding: 2rem;
+      }
+      textarea {
+        height: 15rem;
+      }
+      .submit_button {
+        padding-top: 6rem;
+        .submit {
+          background-color: transparent;
+          color: #2d2d2d;
+          border: 0.1rem solid #2d2d2d;
+          padding: 2.2rem 3rem;
+          border-radius: 1rem;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          font-weight: 400;
+          letter-spacing: 0.2em;
+          margin-top: 9rem;
+          &:hover {
+            background-color: #2d2d2d;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

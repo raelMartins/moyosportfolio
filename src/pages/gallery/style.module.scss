@@ -1,0 +1,22 @@
+@import '../../styles/mixins.module.scss';
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 180rem;
+  margin: 0rem auto;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
+  .gallery_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .image {
+      aspect-ratio: 1 / 1;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  }
+}
